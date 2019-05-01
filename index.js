@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 
-const token = 'NTcyNDUzNzI5MDMxMTU5ODA5.XMchNA.K4wF3SwH2ArfjDVoTYMiSscg0qg';
+const token = 'Prank';
 
 const PREFIX = '!';
 
@@ -221,6 +221,6 @@ bot.on('ready', ()=> {
     
     })
     
-bot.login(token);
-client.login(process.env.token);
+bot.login(BOT_TOKEN);
+client.login(process.env.BOT_TOKEN);
 

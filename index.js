@@ -60,7 +60,9 @@ bot.on('message', msg=>{
       
         server.createChannel(name, "text")
         .then(channel => {
-            channel.setParent('572715771512487956');           
+            channel.setParent('572715771512487956');   
+            channel.send(name);
+
         })
         candelete.push(name);       
         

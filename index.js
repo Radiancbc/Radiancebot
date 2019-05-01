@@ -221,6 +221,6 @@ bot.on('ready', ()=> {
     
     })
     
-//bot.login(BOT_TOKEN);
-client.login(process.env.BOT_TOKEN);
+bot.login(BOT_TOKEN);
+//client.login(process.env.BOT_TOKEN);
 

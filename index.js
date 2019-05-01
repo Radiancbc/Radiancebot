@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 const bot = new Discord.Client();
 
 const token = 'Prank';
-
+var counter = 0;
 const PREFIX = '!';
 
 cantdelete = ["try","allgemein","-announcement","get-your-roles","get-your-key","twink-request","-check_in","🔍-check_in","🔉-announcement","mythic➕lfm","mythiclfm"
@@ -21,6 +21,13 @@ bot.on('message', msg=>{
 
         msg.delete();
         msg.reply(" findet das Marvin echt hart stinkt!")
+
+        break;
+        
+        case 'Zeit':
+
+        msg.delete();
+        msg.reply(counter + " T-6E")
 
         break;
 
@@ -173,7 +180,8 @@ bot.on('ready', ()=> {
     console.log('Test Bot is now Ready!');
     
     })
-    
+   
+counter = counter + 1 ;
 //bot.login(process.env.BOT_TOKEN);
 bot.login(process.env.BOT_TOKEN);
 

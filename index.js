@@ -17,7 +17,7 @@ bot.on('message', msg=>{
 
     switch(args[0]){
         
-        case 'marvin':
+        case 'Marvin':
 
         msg.delete();
         msg.reply(" findet das Marvin echt hart stinkt!")
@@ -31,7 +31,7 @@ bot.on('message', msg=>{
 
         break;
 
-        case 'Kraggi':
+        case 'Shaqur':
 
         msg.delete();
         msg.reply(" findet das Shaqur der einzige der Arbeitet ist!")

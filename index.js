@@ -101,9 +101,7 @@ bot.on('message', msg=>{
             if(allow){
             versuch = msg.guild.channels.find(channel => channel.name === args[1]);                      
 
-            msg.delete();
-
-            msg.reply(" löscht channel " + args[1]); 
+            msg.delete();           
 
             versuch.delete();
             }else{

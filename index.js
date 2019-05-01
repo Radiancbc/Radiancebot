@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
-
+var Gamsel = false;
 const token = 'Prank';
 var counter = 0;
 const PREFIX = '!';
@@ -23,6 +23,21 @@ bot.on('message', msg=>{
         msg.reply(" findet das Marvin echt hart stinkt!")
 
         break;
+        
+        case 'Gamselon':
+
+        msg.delete();
+        msg.reply("Gamsel = " + Gamsel)
+        Gamsel = true;
+        break;
+        
+         case 'Gamseloff':
+
+        msg.delete();
+        msg.reply("Gamsel = " + Gamsel)
+        Gamsel = false;
+        break;
+        
         
         case 'Zeit':
 
@@ -69,6 +84,9 @@ bot.on('message', msg=>{
         .then(channel => {
             channel.setParent('572715771512487956');   
             channel.send(name);
+            if(Gamsel == true){
+            channel.send("Gamsele Hunter DD");
+            }
 
         })
         candelete.push(name);       

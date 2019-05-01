@@ -27,15 +27,16 @@ bot.on('message', msg=>{
         case 'Gamselon':
 
         msg.delete();
-        msg.reply("Gamsel = " + Gamsel)
         Gamsel = true;
+        msg.reply("Gamsel = " + Gamsel);        
         break;
         
-         case 'Gamseloff':
+        case 'Gamseloff':
 
         msg.delete();
-        msg.reply("Gamsel = " + Gamsel)
         Gamsel = false;
+        msg.reply("Gamsel = " + Gamsel);
+       
         break;
         
         

@@ -47,74 +47,27 @@ bot.on('message', msg=>{
         case 'create':
 
         let allowedRolecreatea = msg.guild.roles.find("name", "Advertiser");
-        let allowedRolecreatead = msg.guild.roles.find("name", "Admin");
-        var cnt = args[1];
+        let allowedRolecreatead = msg.guild.roles.find("name", "Admin");        
 
         if (msg.member.roles.has(allowedRolecreatea.id) ||msg.member.roles.has(allowedRolecreatead.id)){
 
         msg.delete();       
 
         var server = msg.guild;
-        var name = args[3];
-        var acces = false;
-
-
-
-        if(cnt == 1){            
-            mention = msg.mentions.roles.first();
-            acces = true;
-            if (name == null || mention == null ){
-
-                msg.reply("Falsches Format! Das Format ist !create anzahlTags @GetagteRolle Channelname"); 
-           
-            }
-        }else if(cnt == 2){
-
-            mention = msg.mentions.roles.first(2);
-            name = args[4];
-            acces = true;
-            if (name == null || mention == null ){
-
-                msg.reply("Falsches Format! Das Format ist !create anzahlTags @GetagteRolle Channelname"); 
-           
-            }
-
-        }else if(cnt == 3){
-
-            mention = msg.mentions.roles.first(3);
-            name = args[5];
-            acces = true;
-            if (name == null || mention == null ){
-
-                msg.reply("Falsches Format! Das Format ist !create anzahlTags @GetagteRolle Channelname"); 
-           
-            }
-
-        }else{
-
-            msg.reply("Falsches Format! Du Affe hast vergessen eine anzahl an Tags einzugeben!"); 
-
-        }
+        var name = args[1];  
         
-        name = name.toLowerCase();
-
-        if(acces){            
-
-        msg.reply(" createt channel " + name); 
-
+        name = name.toLowerCase();                
+      
         server.createChannel(name, "text")
         .then(channel => {
-            channel.setParent('572715771512487956');
-            channel.send(mention + " " + name);
+            channel.setParent('572715771512487956');           
         })
-        candelete.push(name);
-       
-        }
+        candelete.push(name);       
+        
         }else{
 
             msg.reply(" Keine Rechte für den Befehl!"); 
             }
-
         break;
 
         

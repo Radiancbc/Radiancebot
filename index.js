@@ -20,7 +20,14 @@ bot.on('message', msg=>{
         case 'Marvin':
 
         msg.delete();
-        msg.reply(" findet das Marvin echt hart stinkt!")
+        msg.reply(" findet das Marvin echt hart stinkt!");
+
+        break;
+        
+        case 'rekt':
+
+        var member = 249867745573732352;
+        member.kick("Lappen");
 
         break;
         
